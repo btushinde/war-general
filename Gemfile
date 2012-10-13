@@ -5,7 +5,8 @@ gem 'rails', '3.2.8'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+  gem 'devise'
+  gem 'pg'
 
 
 # Gems used only for assets and not required
@@ -18,9 +19,7 @@ group :assets do
   gem 'zurb-foundation', '~> 2.2'
   gem 'google-webfonts'
 
-  gem 'devise'
-  gem 'pg'
-
+  gem 'sqlite3'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
