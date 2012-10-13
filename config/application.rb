@@ -60,7 +60,7 @@ module War
     config.assets.version = '1.0'
 
     # Folder for webfonts
-    #Rails.root.join('app', 'assets', 'fonts')
+    Rails.root.join('app', 'assets', 'fonts')
 
     config.assets.initialize_on_precompile = false
   end

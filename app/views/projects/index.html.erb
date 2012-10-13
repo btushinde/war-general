@@ -10,8 +10,9 @@
                         <li><a href="#">nav ul li a</a></li>
                     </ul>
                 </nav> -->
-                <section class="user">
-                  <%= link_to 'sign_out', destroy_user_session_path, :method => :delete %>
+                <section class="user two columns offset-by-ten last">
+                  <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
+                  <span class="greeting"><%= User %></span>
                 </section>  
 
             </header>
@@ -31,7 +32,8 @@
 
                             <ul class="options">
                               <li><span class="ss-picture"> <%= link_to 'Show', project %></li>
-                              <li><span class="ss-write"> <%= link_to 'Edit', edit_project_path(project) %></li>
+                              <!-- <li><span class="ss-write"> <%= link_to 'Edit', edit_project_path(project) %></li> -->
+                              <li><a onclick="getProject(<%=  project.id %>)"><span class="ss-write"></span>Edit</a></li>
                               <li><span class="ss-trash"> </span><%= link_to ' Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></li>
                             </ul>
                         </article>
@@ -47,6 +49,15 @@
 
             <footer class="wrapper">
             </footer>
+
+
+          <div id="editModal" class="reveal-modal expand medium">
+            <h2></h2>
+            <p class="description"></p>
+            <p class="slug"></p>
+            <a class="close-reveal-modal">&#215;</a>
+          </div>
+
         </div> <!-- #main-container -->
 
         <script src="http://js.pusher.com/1.12/pusher.min.js"></script>

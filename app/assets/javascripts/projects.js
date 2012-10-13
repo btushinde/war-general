@@ -1,3 +1,6 @@
+baseURL = "http://localhost:3000";
+
+
 $(function() {
 	$blocks = $('.blocks').isotope({
 		animationOptions: {
@@ -106,12 +109,34 @@ function sendPayload(testPort, repoName){
 		var triggered = channel.trigger('event1', payload);
 	});
 
-	// $.post(
-	// 	'http://' + options.host + ':' + options.port + options.path,
-	// 	frm.attr("action"),
-	// 	dat,
-	// 	function(data) {
-	// 		alert("Response: " + data);
-	// 	}
- //    );
+// $.post(
+// 'http://' + options.host + ':' + options.port + options.path,
+//	frm.attr("action"),
+//	dat,
+//	function(data) {
+//		alert("Response: " + data);
+//	}
+// );
 }
+
+
+
+
+function getProject(id){
+	$.getJSON(baseURL + "/projects/" + id, function(data){
+		$m = $('#editModal');
+
+		$m.find('h2').text(data.name);
+		$m.find('.description').text(data.description);
+		$m.find('.slug').text(data.slug);
+		$m.reveal({
+			animation: 'fade', //fade, fadeAndPop, none
+			animationSpeed: 150, //how fast animations are
+			closeOnBackgroundClick: true, //if you click background will modal close?
+			dismissModalClass: 'close-reveal-modal' //the class of a button or element that will close an open modal);
+		});
+	});
+
+
+}
+
