@@ -62,6 +62,6 @@ module War
     # Folder for webfonts
     Rails.root.join('app', 'assets', 'fonts')
 
-    config.assets.initialize_on_precompile = false
+    #config.assets.initialize_on_precompile = false
   end
 end
