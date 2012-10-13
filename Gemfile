@@ -18,6 +18,8 @@ group :assets do
   gem 'zurb-foundation', '~> 2.2'
   gem 'google-webfonts'
 
+  gem 'devise'
+
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
