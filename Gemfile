@@ -19,6 +19,7 @@ group :assets do
   gem 'google-webfonts'
 
   gem 'devise'
+  gem 'pg'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
