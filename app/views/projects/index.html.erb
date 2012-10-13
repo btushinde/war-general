@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/screen.css">
+
+        <script src="../js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+        <script src="http://js.pusher.com/1.12/pusher.min.js" type="text/javascript"></script>
+
+      
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700,900,300italic' rel='stylesheet' type='text/css'>
+
+    </head>
+
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+        <div class="main-container">
+            <header class="wrapper clearfix">
+                <h1 class="title">Warboard</h1>
+                <h2>A status tool</h2>
+               <!--  <nav>
+                    <ul>
+                        <li><a href="#">All</a></li>
+                        <li><a href="#">nav ul li a</a></li>
+                        <li><a href="#">nav ul li a</a></li>
+                    </ul>
+                </nav> -->
+            </header>
+
+             <div class="main wrapper clearfix">
+                <ul class="blocks">
+
+                <% @projects.each do |project| %>
+                    <li>
+                        <article class="block stealz-android">
+                            <div class="corner">+</div>
+                            <header><h2><%= project.name %></h2></header> 
+                            <div class="info">
+                                <%= project.description %>
+                            </div>
+
+                            <ul class="options">
+                              <li><%= link_to 'Show', project %></li>
+                              <li><%= link_to 'Edit', edit_project_path(project) %></li>
+                              <li><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+                            </ul>
+
+                            <section id="graph">
+
+                            </section>
+                        </article>
+                    </li>
+                  <% end %>
+                  </ul>
+
+
+                  <%= link_to 'New Project', new_project_path %>
+
+
+
+                </div> <!-- #main -->
+        
+
+            <footer class="wrapper">
+            </footer>
+        </div> <!-- #main-container -->
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
+        <script src="../js/vendor/jquery.isotope.min.js"></script>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+
+        <script src="../js/plugins.js"></script>
+        <script src="../js/main.js"></script>
+
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>
