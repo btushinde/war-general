@@ -6,7 +6,6 @@ gem 'rails', '3.2.8'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
   gem 'devise'
-  gem 'pg'
 
 
 # Gems used only for assets and not required
@@ -19,7 +18,6 @@ group :assets do
   gem 'zurb-foundation', '~> 2.2'
   gem 'google-webfonts'
 
-  gem 'sqlite3'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
@@ -27,6 +25,15 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+group :development, :test do
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+end
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
