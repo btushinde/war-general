@@ -16,6 +16,7 @@ group :assets do
 
   gem 'compass-rails'
   gem 'zurb-foundation', '~> 2.2'
+  gem 'google-webfonts'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby

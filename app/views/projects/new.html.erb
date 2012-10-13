@@ -1,5 +1,25 @@
-<h1>New project</h1>
+        <div class="main-container row">
+            <header class="wrapper clearfix">
+                <h1 class="title">Warboard</h1>
+                <h2>New Project</h2>
+               <!--  <nav>
+                    <ul>
+                        <li><a href="#">All</a></li>
+                        <li><a href="#">nav ul li a</a></li>
+                        <li><a href="#">nav ul li a</a></li>
+                    </ul>
+                </nav> -->
+            </header>
 
-<%= render 'form' %>
+             <div class="main wrapper row clearfix">
+               <%= render 'form' %>
+              	
+              	<a href="<%= projects_path %>" class="small button">&lt; Back</a>
 
-<%= link_to 'Back', projects_path %>
+
+                </div> <!-- #main -->
+        
+
+            <footer class="wrapper">
+            </footer>
+        </div> <!-- #main-container -->
