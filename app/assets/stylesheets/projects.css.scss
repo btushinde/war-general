@@ -192,6 +192,12 @@ a, a:visited, a:active{
 			}
 		}
 
+		&:hover{
+			.options{
+				display: block;
+			}
+		}
+
 		&.expanded{
 			.options, .info{
 				display: block;
