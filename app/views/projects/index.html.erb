@@ -12,7 +12,7 @@
                 </nav> -->
                 <section class="user two columns offset-by-ten last">
                   <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
-                  <span class="greeting"><%= User %></span>
+
                 </section>  
 
             </header>
@@ -32,8 +32,7 @@
 
                             <ul class="options">
                               <li><span class="ss-picture"> <%= link_to 'Show', project %></li>
-                              <!-- <li><span class="ss-write"> <%= link_to 'Edit', edit_project_path(project) %></li> -->
-                              <li><a onclick="getProject(<%=  project.id %>)"><span class="ss-write"></span>Edit</a></li>
+                              <li><a onclick="getProject(<%=  project.id %>)"><span class="ss-write"></span> Edit</a></li>
                               <li><span class="ss-trash"> </span><%= link_to ' Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></li>
                             </ul>
                         </article>
