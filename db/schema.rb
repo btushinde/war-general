@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20121013151810) do
     t.string   "slug"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.boolean  "open",        :null => false, :default => false
   end
 
   create_table "users", :force => true do |t|
@@ -38,5 +39,4 @@ ActiveRecord::Schema.define(:version => 20121013151810) do
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
-
 end

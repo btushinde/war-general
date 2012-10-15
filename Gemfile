@@ -7,6 +7,9 @@ gem 'rails', '3.2.8'
 
   gem 'devise'
   gem 'octokit'
+  gem 'pusher'
+  gem 'github_api'
+  gem 'harvested'
 
 
 # Gems used only for assets and not required
