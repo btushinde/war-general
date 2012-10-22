@@ -22,8 +22,8 @@
                 <ul class="blocks">
 
                 <% @projects.each do |project| %>
-                    <li>
-                        <article class="block stealz-android">
+                    <li >
+                        <article class="block <%= project.slug %>">
                             <div class="corner">+</div>
                             <header><h2><%= project.name %></h2></header> 
                             <div class="info">

@@ -4,6 +4,7 @@ class CreateProjects < ActiveRecord::Migration
       t.string :name
       t.string :description
       t.string :slug
+      t.boolean :open
 
       t.timestamps
     end

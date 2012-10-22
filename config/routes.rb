@@ -5,6 +5,10 @@ War::Application.routes.draw do
 
   root :to =>  "projects#index"
 
+  post 'pusher/auth'
+
+  post 'projects/git'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -23,7 +23,12 @@
     <%#= f.label :slug %><br />
     <%= f.text_field :slug, :placeholder => "URL Slug" %>
   </div>
+  <div class="field">
+  <span> Open? </span>
+  <%= check_box_tag(:open) %>
+  </div>
   <div class="actions">
+   
     <%= f.submit %>
   </div>
 <% end %>
