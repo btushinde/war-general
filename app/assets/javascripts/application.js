@@ -15,3 +15,4 @@
 //= require foundation
 //= require_tree .
 //= require jquery.isotope.min
+//= require meny.min

@@ -2,6 +2,9 @@ baseURL = "http://localhost:3000";
 
 
 $(function() {
+
+
+	// Set up Isotope
 	$blocks = $('.blocks').isotope({
 		animationOptions: {
 		duration: 250,
@@ -11,13 +14,25 @@ $(function() {
 		animationEngine : 'jquery',
 		masonry: {columnWidth: 45}
 	});
-
-
+	// Apply to blocks
 	$('.blocks').find('li .corner').click(function(){
 		toggleBlock($(this).parent().parent());
 	});
 
 
+	// Configure Meny menu
+	var meny = Meny.create({
+		menuElement: document.querySelector('.meny'),
+		contentsElement: document.querySelector('.meny-contents'),
+		position: 'left',
+		height: 200,
+		width: 140
+	});
+
+
+
+
+	// Pusher config
 	Pusher.log = function(message) {
 		if (window.console && window.console.log) window.console.log(message);
 	};
@@ -34,6 +49,8 @@ $(function() {
 		setTimeout(function(){toggleBlock($('.'+data.repository.name).parent());},500);
 		
 	});
+
+
 
 });
 
