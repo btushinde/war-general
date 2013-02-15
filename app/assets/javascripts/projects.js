@@ -29,6 +29,14 @@ $(function() {
 		width: 140
 	});
 
+	meny.addEventListener( 'open', function() {
+		$('.meny').css('opacity', '1');
+	} );
+
+	meny.addEventListener( 'close', function() {
+		$('.meny').css('opacity', '0.1');
+	} );
+
 
 
 
